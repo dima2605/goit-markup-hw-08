@@ -1,20 +1,17 @@
-.section__title {
-  margin-bottom: 50px;
+.works {
+  display: none;
 
-  @include font(700, 36px, 1.16);
-  color: var(--title-text-color);
-  text-align: center;
+  @include desktop {
+    display: block;
+    padding-top: 0;
+  }
 }
+
+
 
 .activity__list {
   display: flex;
-}
-
-.activity__item {
-  margin-left: 30px;
-  &:first-child {
-    margin-left: 0;
-  }
+  gap: var(--indent);
 }
 
 .activity__item {
