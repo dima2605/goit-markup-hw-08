@@ -1,0 +1,108 @@
+.filter__list {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.filter__item {
+  margin-left: 8px;
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.filter__btn {
+  display: flex;
+  border-radius: 4px;
+  border: none;
+  padding: 6px 22px;
+
+  color: var(--title-text-color);
+  background-color: var(--third-background-color);
+
+  font-family: inherit;
+  @include font(500, 16px, 1.62);
+  text-align: center;
+
+  cursor: pointer;
+
+  transition: background-color 250ms var(--time-function),
+    color 250ms var(--time-function), box-shadow 250ms var(--time-function);
+  &:hover,
+  &:focus {
+    color: var(--white-text-color);
+    background-color: var(--accent-color);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+}
+
+/* ------------section-------------- */
+
+.portfolio__link {
+  transition: box-shadow 250ms var(--time-function);
+  &:hover,
+  &:focus {
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.portfolio__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.portfolio__item {
+  display: flex;
+  flex-basis: calc(100% / 3 - 30px);
+  margin-left: 30px;
+  margin-bottom: 30px;
+  &:nth-child(3n + 1) {
+    margin-left: 0;
+  }
+  &:nth-last-child(-n + 3) {
+    margin-bottom: 0;
+  }
+}
+
+.portfolio__card {
+  padding: 20px 24px;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+}
+.portfolio__title {
+  margin-bottom: 4px;
+
+  @include font(700, 18px, 2, 0.06em);
+  color: var(--title-text-color);
+}
+.portfolio__text {
+  @include font(null, 16px, 1.88);
+  color: var(--primary-text-color);
+}
+
+.portfolio__thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  padding: 63px 24px;
+
+  background-color: rgba(33, 150, 243, 0.9);
+
+  transform: translateY(100%);
+  transition: transform 250ms var(--time-function);
+  .portfolio__item:hover & {
+    transform: translate(0);
+  }
+}
+
+.overlay__text {
+  @include font(null, 18px, 1.56);
+  color: var(--white-text-color);
+}
