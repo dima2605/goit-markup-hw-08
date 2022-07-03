@@ -35,7 +35,6 @@
 .hero__title {
   max-width: 360px;
   @include tablet {
-    max-width: 696px;
   }
   margin: 0 auto;
   margin-bottom: 30px;
@@ -44,6 +43,7 @@
 
   text-transform: uppercase;
   @include desktop {
+    max-width: 696px;
     @include font(900, 44px, 1.36, 0.06em);
   }
 }
