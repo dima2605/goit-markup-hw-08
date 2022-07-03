@@ -21,51 +21,72 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-    <!-- <header class="header">
+    <header class="header">
       <div class="container header__main-nav">
         <nav class="nav">
           <a href="index.html" class="nav__page-logo link"
             ><span class="nav__logo-active">Web</span
             ><span class="nav__logo">Studio</span></a
           >
-
-          <ul class="nav__list header__nav-list">
-            <li class="nav__item">
-              <a href="./index.html" class="nav__link link nav__current"
-                >Студия
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="./portfolio.html" class="nav__link link">Портфолио</a>
-            </li>
-            <li class="nav__item">
-              <a href="" class="nav__link link">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-
-        <ul class="auth__list">
-          <li class="auth__item">
-            <a
-              href="mail:info@devstudio.com"
-              class="auth__link-icon auth__link link"
+          <button type="button" class="menu_button" data-menu-button>
+            <svg
+              width="40"
+              height="40"
+              aria-expanded="false"
+              aria-label="Переключатель мобильного меню"
             >
-              <svg class="auth__icon" width="16" height="12">
-                <use href="./images/sprite.svg#icon-envelope"></use></svg
-              >info@devstudio.com
-            </a>
-          </li>
+              <use
+                class="icon_cross"
+                href="./images/sprite.svg#icon-cross-header"
+              ></use>
+              <use
+                class="icon_menu"
+                href="./images/sprite.svg#icon-menu-header"
+              ></use>
+            </svg>
+          </button>
 
-          <li class="auth__item">
-            <a href="tel:+380961111111" class="auth__link-icon auth__link link">
-              <svg class="auth__icon" width="10" height="16">
-                <use href="./images/sprite.svg#icon-Vector"></use></svg
-              >+38 096 111 11 11
-            </a>
-          </li>
-        </ul>
+          <div class="menu_header" data-menu>
+            <ul class="nav__list header__nav-list">
+              <li class="nav__item">
+                <a href="./index.html" class="nav__link link nav__current"
+                  >Студия
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="./portfolio.html" class="nav__link link">Портфолио</a>
+              </li>
+              <li class="nav__item">
+                <a href="" class="nav__link link">Контакты</a>
+              </li>
+            </ul>
+            <ul class="auth__list">
+              <li class="auth__item">
+                <a
+                  href="mail:info@devstudio.com"
+                  class="auth__link-icon auth__link link"
+                >
+                  <svg class="auth__icon" width="16" height="12">
+                    <use href="./images/sprite.svg#icon-envelope"></use></svg
+                  >info@devstudio.com
+                </a>
+              </li>
+
+              <li class="auth__item">
+                <a
+                  href="tel:+380961111111"
+                  class="auth__link-icon auth__link link"
+                >
+                  <svg class="auth__icon" width="10" height="16">
+                    <use href="./images/sprite.svg#icon-Vector"></use></svg
+                  >+38 096 111 11 11
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
-    </header> -->
+    </header>
 
     <main>
       <section class="hero">
@@ -549,5 +570,6 @@
     </div> -->
 
     <script src="./js/modal.js"></script>
+    <script src="./js/button-is-open.js"></script>
   </body>
 </html>
