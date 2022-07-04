@@ -306,10 +306,19 @@ body {
 .header {
   position: relative;
   height: 60px;
-  border-bottom: 1px solid #ececec;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  border-bottom: 1px solid #ececec;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    height: 80px;
+  }
+}
+
+.nav {
+  display: flex;
 }
 
 .nav__page-logo {
@@ -317,6 +326,12 @@ body {
 }
 .nav__page-logo:focus {
   color: var(--accent-color);
+}
+@media screen and (min-width: 768px) {
+  .nav__page-logo {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
 }
 
 .nav__logo-active {
@@ -327,14 +342,30 @@ body {
   line-height: 1.16;
   letter-spacing: 0.03em;
 }
+@media screen and (min-width: 1200px) {
+  .nav__logo-active {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+  }
+}
 
 .nav__logo {
-  color: var(--title-text-color);
-  font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 24px;
   line-height: 1.16;
   letter-spacing: 0.03em;
+  font-family: "Raleway", sans-serif;
+  color: var(--title-text-color);
+}
+@media screen and (min-width: 1200px) {
+  .nav__logo {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+  }
 }
 
 .menu_button {
@@ -360,21 +391,35 @@ body {
 .menu_button.is-open .icon_cross {
   display: block;
 }
+@media screen and (min-width: 768px) {
+  .menu_button {
+    display: none;
+  }
+}
 
 .menu_header {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 800px;
-  background-color: white;
-  z-index: 1;
 }
-.menu_header.is-open {
-  display: flex;
-  flex-direction: column;
-  padding: 48px 40px;
+@media screen and (max-width: 767px) {
+  .menu_header {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 800px;
+    background-color: white;
+    z-index: 1;
+  }
+  .menu_header.is-open {
+    display: flex;
+    flex-direction: column;
+    padding: 48px 40px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .menu_header {
+    display: flex;
+  }
 }
 
 .header__nav-list {
@@ -384,17 +429,133 @@ body {
   letter-spacing: 0.02em;
   margin-bottom: auto;
 }
+@media screen and (min-width: 768px) {
+  .header__nav-list {
+    display: flex;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    gap: 50px;
+    margin-left: 88px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__nav-list {
+    margin-left: 93px;
+  }
+}
 
 .nav__item {
   margin-bottom: 33px;
 }
+@media screen and (min-width: 768px) {
+  .nav__item {
+    margin-bottom: 0;
+  }
+}
+
+.nav__link {
+  color: var(--title-text-color);
+  transition: color 250ms var(--time-function);
+}
+.nav__link:hover, .nav__link:focus {
+  color: var(--accent-color);
+}
+@media screen and (min-width: 768px) {
+  .nav__link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+.nav__link {
+  color: var(--title-text-color);
+  transition: color 250ms var(--time-function);
+}
+.nav__link:hover, .nav__link:focus {
+  color: var(--accent-color);
+}
+@media screen and (min-width: 768px) {
+  .nav__link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+.nav__current {
+  color: var(--accent-color);
+}
+@media screen and (min-width: 768px) {
+  .nav__current {
+    position: relative;
+  }
+  .nav__current:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 4px;
+    display: block;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .auth__list {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+    justify-content: center;
+    margin-left: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .auth__list {
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 50px;
+  }
+}
+
+.auth__item {
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .auth__item {
+    margin: 0;
+  }
+}
 
 .auth__tel-icon {
-  font-weight: 500;
-  font-size: 34px;
-  line-height: 1.17;
-  letter-spacing: 0.02em;
+  transition: color 250ms var(--time-function);
+}
+.auth__tel-icon:focus, .auth__tel-icon:hover {
   color: var(--accent-color);
+}
+@media screen and (max-width: 767px) {
+  .auth__tel-icon {
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: var(--accent-color);
+  }
+}
+@media screen and (min-width: 768px) {
+  .auth__tel-icon {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.02em;
+    color: var(--primary-text-color);
+    display: flex;
+    align-items: center;
+  }
 }
 
 .auth__mail-icon {
@@ -403,12 +564,43 @@ body {
   line-height: 1.16;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
+  transition: color 250ms var(--time-function);
+}
+.auth__mail-icon:focus, .auth__mail-icon:hover {
+  color: var(--accent-color);
+}
+@media screen and (min-width: 768px) {
+  .auth__mail-icon {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.02em;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.auth__icon {
+  display: inline-block;
+  fill: currentColor;
+  margin-right: 10px;
+  justify-content: center;
+}
+@media screen and (max-width: 767px) {
+  .auth__icon {
+    display: none;
+  }
 }
 
 .mobile__list {
   display: flex;
   gap: 20px;
   margin-top: 65px;
+}
+@media screen and (min-width: 768px) {
+  .mobile__list {
+    display: none;
+  }
 }
 
 .mobile__item + .mobile__item {
@@ -432,38 +624,6 @@ body {
   font-size: 18px;
   line-height: 1.22;
   letter-spacing: 0.02em;
-  color: var(--accent-color);
-}
-
-.auth__icon {
-  display: none;
-}
-
-.nav {
-  display: flex;
-}
-
-.nav__link {
-  color: var(--title-text-color);
-  transition: color 250ms var(--time-function);
-}
-.nav__link:hover, .nav__link:focus {
-  color: var(--accent-color);
-}
-
-.auth__item {
-  margin-bottom: 30px;
-}
-
-.auth__link {
-  transition: color 250ms var(--time-function);
-}
-.auth__link:focus, .auth__link:hover {
-  color: var(--accent-color);
-}
-
-.nav__current {
-  position: relative;
   color: var(--accent-color);
 }
 
