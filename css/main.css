@@ -347,6 +347,10 @@ body {
   border: none;
   z-index: 10;
 }
+.menu_button:hover, .menu_button:focus {
+  fill: var(--accent-color);
+  transition: fill 250ms var(--time-function);
+}
 .menu_button .icon_cross {
   display: none;
 }
@@ -363,16 +367,78 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 800px;
   background-color: white;
   z-index: 1;
 }
 .menu_header.is-open {
   display: flex;
   flex-direction: column;
+  padding: 48px 40px;
 }
 
-/* main-nav */
+.header__nav-list {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.75;
+  letter-spacing: 0.02em;
+  margin-bottom: auto;
+}
+
+.nav__item {
+  margin-bottom: 33px;
+}
+
+.auth__tel-icon {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+}
+
+.auth__mail-icon {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.16;
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color);
+}
+
+.mobile__list {
+  display: flex;
+  gap: 20px;
+  margin-top: 65px;
+}
+
+.mobile__item + .mobile__item {
+  position: relative;
+  transition: color 250ms var(--time-function);
+}
+.mobile__item + .mobile__item::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  display: block;
+  height: 100%;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+.mobile__item + .mobile__item:hover, .mobile__item + .mobile__item:focus {
+  color: var(--accent-color);
+}
+
+.mobile__link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+}
+
+.auth__icon {
+  display: none;
+}
+
 .nav {
   display: flex;
 }
@@ -385,9 +451,11 @@ body {
   color: var(--accent-color);
 }
 
-/* auth-nav */
+.auth__item {
+  margin-bottom: 30px;
+}
+
 .auth__link {
-  color: var(--primary-text-color);
   transition: color 250ms var(--time-function);
 }
 .auth__link:focus, .auth__link:hover {
@@ -397,17 +465,6 @@ body {
 .nav__current {
   position: relative;
   color: var(--accent-color);
-}
-.nav__current:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -1px;
-  width: 100%;
-  height: 4px;
-  display: block;
-  background-color: var(--accent-color);
-  border-radius: 2px;
 }
 
 .hero {
