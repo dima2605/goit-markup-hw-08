@@ -1,15 +1,22 @@
 .filter__list {
-  margin-bottom: 50px;
   display: flex;
-  justify-content: center;
-}
-
-.filter__item {
-  margin-left: 8px;
-  &:first-child {
-    margin-left: 0;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    row-gap: 15px;
+  }
+  @include tablet {
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+  @include desktop {
+    margin-bottom: 50px;
   }
 }
+.filter__item + .filter__item{
+  margin-left: 8px;
+}
+
 
 .filter__btn {
   display: flex;

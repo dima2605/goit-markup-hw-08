@@ -1147,16 +1147,29 @@ body {
 }
 
 .filter__list {
-  margin-bottom: 50px;
   display: flex;
-  justify-content: center;
+}
+@media screen and (max-width: 767px) {
+  .filter__list {
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    row-gap: 15px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .filter__list {
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .filter__list {
+    margin-bottom: 50px;
+  }
 }
 
-.filter__item {
+.filter__item + .filter__item {
   margin-left: 8px;
-}
-.filter__item:first-child {
-  margin-left: 0;
 }
 
 .filter__btn {
