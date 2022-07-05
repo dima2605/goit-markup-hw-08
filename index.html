@@ -64,7 +64,7 @@
               <li class="auth__item">
                 <a
                   href="tel:+380961111111"
-                  class="auth__link auth__tel-icon  link"
+                  class="auth__link auth__tel-icon link"
                 >
                   <svg class="auth__icon" width="10" height="16">
                     <use href="./images/sprite.svg#icon-Vector"></use></svg
@@ -74,7 +74,7 @@
               <li class="auth__item">
                 <a
                   href="mail:info@devstudio.com"
-                  class="auth__link auth__mail-icon  link"
+                  class="auth__link auth__mail-icon link"
                 >
                   <svg class="auth__icon" width="16" height="12">
                     <use href="./images/sprite.svg#icon-envelope"></use></svg
@@ -83,10 +83,18 @@
               </li>
             </ul>
             <ul class="mobile__list">
-              <li class="mobile__item"><a href="" class="mobile__link link">Instagram</a></li>
-              <li class="mobile__item"><a href="" class="mobile__link link">Twitter</a></li>
-              <li class="mobile__item"><a href="" class="mobile__link link">Facebook</a></li>
-              <li class="mobile__item"><a href="" class="mobile__link link">LinkedIn</a></li>
+              <li class="mobile__item">
+                <a href="" class="mobile__link link">Instagram</a>
+              </li>
+              <li class="mobile__item">
+                <a href="" class="mobile__link link">Twitter</a>
+              </li>
+              <li class="mobile__item">
+                <a href="" class="mobile__link link">Facebook</a>
+              </li>
+              <li class="mobile__item">
+                <a href="" class="mobile__link link">LinkedIn</a>
+              </li>
             </ul>
           </div>
         </nav>
@@ -166,10 +174,10 @@
           <ul class="activity__list">
             <li class="activity__item">
               <img
-                src="./images/img1.jpg"
+                srcset="./images/activity1.jpg 1x, ./images/activity1-2x.jpg 2x"
+                src="./images/activity1.jpg"
                 alt="Человек печатает на клавиатуре"
                 width="370"
-                height="294"
               />
               <div class="activity__box">
                 <p class="activity__text">Десктопные приложения</p>
@@ -177,7 +185,8 @@
             </li>
             <li class="activity__item">
               <img
-                src="./images/img2.jpg"
+                srcset="./images/activity2.jpg 1x, ./images/activity2-2x.jpg 2x"
+                src="./images/activity2.jpg"
                 alt="Человек работает с ноутбуком"
                 width="370"
                 height="294"
@@ -188,7 +197,8 @@
             </li>
             <li class="activity__item">
               <img
-                src="./images/img3.jpg"
+                srcset="./images/activity3.jpg 1x, ./images/activity3-2x.jpg 2x"
+                src="./images/activity3.jpg"
                 alt="Человек работает с планшетом"
                 width="370"
                 height="294"
@@ -206,11 +216,31 @@
           <h2 class="section__title">Наша команда</h2>
           <ul class="team__list">
             <li class="team__item">
-              <img
-                src="./images/photo-1.jpg"
-                alt="Куратор"
-                class="team__imag"
-              />
+              <picture>
+                <source
+                  srcset="./images/team1.jpg 1x, ./images/team1-2x.jpg 2x"
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team1-tab.jpg    1x,
+                    ./images/team1-tab-2x.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team1-mob.jpg    1x,
+                    ./images/team1-mob-2x.jpg 2x
+                  "
+                  media="(min-width:320px)"
+                />
+                <img
+                  src="./images/team1.jpg"
+                  alt="Куратор"
+                  class="team__imag"
+                />
+              </picture>
               <h3 class="team__name">Игорь Демьяненко</h3>
               <p lang="en" class="team__text">Product Designer</p>
               <ul class="soc__list">
@@ -245,11 +275,32 @@
               </ul>
             </li>
             <li class="team__item">
-              <img
-                src="./images/photo-2.jpg"
-                alt="Разработчик"
-                class="team__imag imag"
-              />
+              <picture>
+                <source
+                  srcset="./images/team2.jpg 1x, ./images/team2-2x.jpg 2x"
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team2-tab.jpg    1x,
+                    ./images/team2-tab-2x.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team2-mob.jpg    1x,
+                    ./images/team2-mob-2x.jpg 2x
+                  "
+                  media="(min-width:320px)"
+                />
+                <img
+                  src="./images/team2.jpg"
+                  alt="Разработчик"
+                  class="team__imag imag"
+                />
+              </picture>
+
               <h3 class="team__name">Ольга Репина</h3>
               <p lang="en" class="team__text">Frontend Developer</p>
               <ul class="soc__list">
@@ -284,11 +335,32 @@
               </ul>
             </li>
             <li class="team__item">
-              <img
-                src="./images/photo-3.jpg"
-                alt="Маркетолог"
-                class="team__imag"
-              />
+              <picture>
+                <source
+                  srcset="./images/team3.jpg 1x, ./images/team3-2x.jpg 2x"
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team3-tab.jpg    1x,
+                    ./images/team3-tab-2x.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team3-mob.jpg    1x,
+                    ./images/team3-mob-2x.jpg 2x
+                  "
+                  media="(min-width:320px)"
+                />
+                <img
+                  src="./images/team3.jpg"
+                  alt="Маркетолог"
+                  class="team__imag"
+                />
+              </picture>
+
               <h3 class="team__name">Николай Тарасов</h3>
               <p lang="en" class="team__text">Marketing</p>
               <ul class="soc__list">
@@ -324,11 +396,31 @@
               </ul>
             </li>
             <li class="team__item">
-              <img
-                src="./images/photo-4.jpg"
-                alt="Дизайнер"
-                class="team__imag"
-              />
+              <picture>
+                <source
+                  srcset="./images/team4.jpg 1x, ./images/team4-2x.jpg 2x"
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team4-tab.jpg    1x,
+                    ./images/team4-tab-2x.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team4-mob.jpg    1x,
+                    ./images/team4-mob-2x.jpg 2x
+                  "
+                  media="(min-width:320px)"
+                />
+                <img
+                  src="./images/team4.jpg"
+                  alt="Дизайнер"
+                  class="team__imag"
+                />
+              </picture>
               <h3 class="team__name">Михаил Ермаков</h3>
               <p lang="en" class="team__text">UI Designer</p>
               <ul class="soc__list">
