@@ -45,6 +45,9 @@
 /* ------------section-------------- */
 
 .portfolio__link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   transition: box-shadow 250ms var(--time-function);
   &:hover,
   &:focus {
@@ -69,6 +72,7 @@
 }
 
 .portfolio__card {
+  flex-grow: 1;
   padding: 20px 24px;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
@@ -81,6 +85,7 @@
   color: var(--title-text-color);
 }
 .portfolio__text {
+  
   @include font(null, 16px, 1.88);
   color: var(--primary-text-color);
 }

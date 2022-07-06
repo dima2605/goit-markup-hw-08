@@ -16,7 +16,10 @@
 
 .place {
   font-style: normal;
-  padding-bottom: 60px;
+  margin-bottom: 60px;
+  @include desktop{
+    margin: 0;
+  }
 }
 
 .menu__item + .menu__item {

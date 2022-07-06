@@ -49,15 +49,16 @@
   top: 10px;
   right: 15px;
   padding: 0;
-
   background-color: transparent;
   cursor: pointer;
   border: none;
-  z-index: 10;
   &:hover,
   &:focus {
     fill: var(--accent-color);
     transition: fill 250ms var(--time-function);
+  }
+  &.is-open {
+    z-index: 10;
   }
   & .icon_cross {
     display: none;
@@ -82,7 +83,7 @@
     top: 0;
     left: 0;
 
-    height: 800px;
+    height: 100%;
     background-color: white;
 
     z-index: 1;
@@ -114,12 +115,12 @@
     margin-left: 93px;
   }
 }
-.nav__item {
-  margin-bottom: 33px;
-  @include tablet {
-    margin-bottom: 0;
-  }
-}
+// .nav__item {
+//   margin-bottom: 33px;
+//   @include tablet {
+//     margin-bottom: 0;
+//   }
+// }
 .nav__link {
   color: var(--title-text-color);
 
@@ -240,7 +241,7 @@
 .mobile__list {
   display: flex;
   gap: 20px;
-  margin-top: 65px;
+  // margin-top: 65px;
   @include tablet {
     display: none;
   }
